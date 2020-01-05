@@ -1,25 +1,70 @@
-<div class="container">
-    <div class="jumbotron">
-        <h1>Eat Some Burgers</h1>
-        <p>Make the Burgers. Eat the Burgers.</p>
-        <h2>Make your Burger</h2>
-        <panel>
-            <form class="create-form">
-                <div class="form-group">
-                    <label for="newburger">Order Fresh Burger</label>
-                    <input type="text" id="newburger" name="burger">
-                    <button type="submit" class="btn btn-success" id="addburger">
-                        <span class="fa fa-thumbs-up"></span>
-                    </button>
-                </div>
-            </form>
-        </panel>
+<!--Image and Header Container-->
+<div class="container-1">
+
+    <img class="img-fluid"
+        src="https://images.unsplash.com/photo-1456418047667-56bcd35b1a88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
+        alt="Hamburger">
+    <h1>Eat-Da-Burger!</h1>
+</div>
+
+<!--Left side-->
+<div class="row">
+    <div class="col-sm-6">
+        <br />
+        <h2>Burgers to Devour!!</h2>
+        <ul>
+            {{#each burgers}}
+            {{#unless this.devoured}}
+            <li>
+                {{this.id}}
+                {{this.burger_name}}
+                <form action="/{{this.id}}?_method=PUT" method="POST">
+                    <input type="hidden" name="devoured" value="true">
+                    <button class="btn btn-primary" type="submit" id="devourbtn">Devour Me!</button>
+                </form>
+            </li>
+            {{/unless}}
+            {{/each}}
+        </ul>
+
     </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading" id="leftside"><strong>Order Your Burger</strong></div>
-            </div>
-        </div>
+
+    <!--Right side-->
+    <div class="col-sm-6">
+        <br />
+        <h2>Burgers Devoured!!</h2>
+
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <li>
+            {{this.id}}
+            {{this.burger_name}}
+        </li>
+
+        {{/if}}
+        {{/each}}
+
     </div>
+</div>
+<!--End Row -->
+<div class="row"></div>
+<br />
+<br />
+<div class="row">
+    <div class="center col-sm-12">
+        <form class="create form" action="/" method="POST">
+
+            <div class="form-group">
+                <label for="newburger">Burger Name</label>
+                <input type="text" id="newburger" name="burger_name">
+
+                <button class="btn btn-primary" type="submit" id="addburger">Submit Order
+                </button>
+                <br />
+                <br />
+                <h6>Enter the name of the burger you want to eat and then click "Submit Order" button.</h6>
+        </form>
+    </div>
+    <!--End Row-->
+
 </div>
