@@ -1,5 +1,6 @@
 var orm = require("../config/orm");
 
+//burger variable and callback function
 var burger = {
   selectAll: function(cb) {
     orm.selectAll("burgers", function(res) {
