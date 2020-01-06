@@ -1,10 +1,24 @@
 <!--Image and Header Container-->
-<div class="container-1">
+<div class="container-2">
+    <h1 class="glow">Get your Burgers Here!!!</h1>
 
-    <img class="img-fluid"
-        src="https://images.unsplash.com/photo-1456418047667-56bcd35b1a88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"
-        alt="Hamburger">
-    <h1>Eat-Da-Burger!</h1>
+
+    <div class="photobanner">
+        <img class="first" src="/assets/img/img-1.jpg" alt="" />
+        <img src="/assets/img/img-2.jpg" alt="" />
+        <img src="/assets/img/img-3.jpg" alt="" />
+        <img src="/assets/img/img-4.jpg" alt="" />
+        <img src="/assets/img/img-5.jpg" alt="" />
+        <img src="/assets/img/img-1.jpg" alt="" />
+        <img src="/assets/img/img-2.jpg" alt="" />
+        <img src="/assets/img/img-3.jpg" alt="" />
+        <img src="/assets/img/img-4.jpg" alt="" />
+        <img src="/assets/img/img-5.jpg" alt="" />
+
+    </div>
+</div>
+
+<h1>Eat-Da-Burger!</h1>
 </div>
 
 <!--Left side-->
@@ -20,7 +34,7 @@
                 {{this.burger_name}}
                 <form action="/{{this.id}}?_method=PUT" method="POST">
                     <input type="hidden" name="devoured" value="true">
-                    <button class="btn btn-primary" type="submit" id="devourbtn">Devour Me!</button>
+                    <button class="btn btn-primary" type="submit">Devour Me!</button>
                 </form>
             </li>
             {{/unless}}
@@ -60,7 +74,6 @@
 
                 <button class="btn btn-primary" type="submit" id="addburger">Submit Order
                 </button>
-                <br />
                 <br />
                 <h6>Enter the name of the burger you want to eat and then click "Submit Order" button.</h6>
         </form>
