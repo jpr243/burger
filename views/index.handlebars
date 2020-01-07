@@ -34,7 +34,7 @@
                 {{this.burger_name}}
                 <form action="/{{this.id}}?_method=PUT" method="POST">
                     <input type="hidden" name="devoured" value="true">
-                    <button class="btn btn-primary" type="submit">Devour Me!</button>
+                    <button class="btn btn-primary" type="submit" id="devourbtn">Devour Me!</button>
                 </form>
             </li>
             {{/unless}}

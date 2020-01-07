@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @media (min-width: 468px) {
   .container-1 {
     display: flex;
@@ -19,35 +24,125 @@ h1 {
 
 h2 {
   text-align: center;
-  padding: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
+  padding: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
   border-style: solid;
   border-color: blue;
 }
 
-.img-fluid {
-  width: 500px;
-  height: 400px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* Glow animation */
+.glow {
+  background-color: darkblue;
+  font-family: cursive;
+  font-size: 70px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
 }
 
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 30px #e60073, 0 0 40px #e60073,
+      0 0 50px #e60073, 0 0 60px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da5, 0 0 40px #ff4da5,
+      0 0 50px #ff4da5, 0 0 60px #ff4da5, 0 0 70px #ff4da5;
+  }
+}
+
+/* Photobanner container */
+#container-2 {
+  width: 1000px;
+  overflow: hidden;
+  margin: 50px auto;
+  background: white;
+}
+
+.photobanner {
+  height: 155px;
+  width: 3550px;
+  margin-bottom: 80px;
+}
+
+.first {
+  -webkit-animation: bannermove 30s linear infinite;
+  -moz-animation: bannermove 30s linear infinite;
+  -ms-animation: bannermove 30s linear infinite;
+  -o-animation: bannermove 30s linear infinite;
+  animation: bannermove 30s linear infinite;
+}
+
+@keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+@-moz-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+@-webkit-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+@-ms-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+@-o-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+/*form*/
 .form-group {
   text-align: center;
   font-weight: bold;
+  font-family: cursive;
 }
 
-ul,
 li {
   font-size: 20px;
   padding: 20px 50px 10px 50px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-top: 2px;
+  margin-left: 100px;
+  margin-right: 100px;
   list-style: none;
   text-align: left;
   background-color: rgb(177, 214, 247);
+  border-style: ridge;
+  border-color: grey;
+}
+
+#devourbtn {
+  margin-left: 100px;
+  padding: 2px;
 }
 
 .col-sm-6 {
