@@ -21,14 +21,23 @@ To be added
 ## Languages/Technologies Used
 
 HTML, CSS, Javascript
+
 MySQL
+
 Node
+
 Express
+
 Handlebars
+
 ORM
+
 MVC design pattern
+
 method-override npm
+
 body-parser npm
+
 
 
 
